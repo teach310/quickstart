@@ -10,6 +10,7 @@
 		"Other"
 	],
 	"activationEvents": [
+		"onView:quickstartContainer1",
 		"onCommand:quickstart.helloWorld",
 		"onCommand:quickstart.getToday",
 		"onCommand:quickstart.show"
@@ -30,8 +31,37 @@
 				"command": "quickstart.show",
 				"title": "Show",
 				"category": "SampleCommands"
+			},
+			{
+				"command": "quickstartContainer1.show",
+				"title": "Show"
 			}
-		]
+		],
+		"menus": {
+			"view/item/context": [
+				{
+					"command": "quickstartContainer1.show",
+					"when": "view == quickstartContainer1"
+				}
+			]
+		},
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "quickstart-view",
+					"title": "Quickstart",
+					"icon": "media/quickstart_icon.svg"
+				}
+			]
+		},
+		"views": {
+			"quickstart-view": [
+				{
+					"id": "quickstartContainer1",
+					"name": "Container1"
+				}
+			]
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run package",
