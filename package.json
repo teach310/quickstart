@@ -10,28 +10,11 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onView:quickstartContainer1",
-		"onCommand:quickstart.helloWorld",
-		"onCommand:quickstart.getToday",
-		"onCommand:quickstart.show"
+		"onView:quickstartContainer1"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
 		"commands": [
-			{
-				"command": "quickstart.helloWorld",
-				"title": "Hello World",
-				"category": "SampleCommands"
-			},
-			{
-				"command": "quickstart.getToday",
-				"title": "Get Today"
-			},
-			{
-				"command": "quickstart.show",
-				"title": "Show",
-				"category": "SampleCommands"
-			},
 			{
 				"command": "quickstartContainer1.show",
 				"title": "Show"
